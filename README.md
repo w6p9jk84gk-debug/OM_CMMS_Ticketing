@@ -77,6 +77,14 @@ npm start
 
 Auch der optimierte Server läuft unter http://localhost:3000 und bindet standardmässig nur localhost. Entwicklungsserver und Produktionsserver nicht gleichzeitig mit demselben Port oder demselben `.next`-Verzeichnis betreiben. „Produktionsbuild“ bezeichnet die Next.js-Buildart; der Pilot besitzt noch keine produktive Zugriffssicherung.
 
+## Web-Zugriff über Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/w6p9jk84gk-debug/OM_CMMS_Ticketing)
+
+`render.yaml` beschreibt einen Web-Service (Node 22) und eine PostgreSQL-17-Datenbank in Frankfurt. Nach Klick auf den Button und Bestätigung im Render-Konto ist die Anwendung unter `https://om-cmms-ticketing.onrender.com` (bzw. der von Render vergebenen Adresse) erreichbar. Migration und Seed laufen beim Start automatisch.
+
+Hinweise: Der Pilot hat **keine Anmeldung** – jede Person mit dem Link kann Tickets anlegen und ändern; nur fiktive Daten verwenden. Im kostenlosen Render-Plan schläft der Dienst nach Inaktivität (erster Aufruf dauert dann rund eine Minute), und die kostenlose Datenbank läuft nach 30 Tagen ab.
+
 ## Bedienung und Geschäftsregeln
 
 - **Dashboard:** Offene Tickets (alle ausser Erledigt), davon in Bearbeitung, überfällige Tickets und neueste Meldungen. Kennzahlen führen zu passenden Listenfiltern.
